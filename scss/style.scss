@@ -1,0 +1,524 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin forTitle {
+  color: $light;
+  font-size: 2em;
+}
+@mixin forContent {
+  color: $light;
+  font-size: 0.8em;
+}
+@mixin titleAfter {
+  &::after {
+    content: "";
+    display: inline-block;
+    transform: translateY(-30%);
+    margin-right: 95%;
+    width: 5%;
+    height: 3%;
+    background-color: $middle-color;
+  }
+}
+
+$dark: #0a0e0c;
+$light: #f5f5f5;
+$middle-color: #ff533d;
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+body {
+  background-color: $dark;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-rows: minmax(20vh, auto);
+    grid-template-areas:
+      ". . . . . . header-right header-right header-right header-right"
+      ". header-title header-title header-title header-title header-title header-right header-right header-right header-right"
+      ". header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-right header-right header-right header-right"
+      ". header-button header-button header-left header-left header-left header-right header-right header-right header-right"
+      ". . . . arrow arrow header-right header-right header-right header-right"
+      ". . . . . . section1-right section1-right section1-right section1-right"
+      ". section1-title section1-title section1-title section1-title section1-title section1-right section1-right section1-right section1-right"
+      ". section1-content section1-content section1-content section1-content section1-content section1-right section1-right section1-right section1-right"
+      ". section1-content section1-content section1-content section1-content section1-content section1-right section1-right section1-right section1-right"
+      ". . . . . . section2-right section2-right section2-right section2-right"
+      ". section2-title section2-title section2-title section2-title section2-title section2-right section2-right section2-right section2-right"
+      ". section2-content section2-content section2-content section2-content section2-content section2-right section2-right section2-right section2-right"
+      ". section2-content section2-content section2-content section2-content section2-content section2-right section2-right section2-right section2-right"
+      ". . . . . . section3-right section3-right section3-right section3-right"
+      ". section3-title section3-title section3-title section3-title section3-title section3-right section3-right section3-right section3-right"
+      ". section3-content section3-content section3-content section3-content section3-content section3-right section3-right section3-right section3-right"
+      ". section3-content section3-content section3-content section3-content section3-content section3-right section3-right section3-right section3-right"
+      ". . . . . . section4-right section4-right section4-right section4-right"
+      ". section4-title section4-title section4-title section4-title section4-title section4-right section4-right section4-right section4-right"
+      ". section4-content section4-content section4-content section4-content section4-content section4-right section4-right section4-right section4-right"
+      ". section4-content section4-content section4-content section4-content section4-content section4-right section4-right section4-right section4-right"
+      ". . . . . . section5-right section5-right section5-right section5-right"
+      ". section5-title section5-title section5-title section5-title section5-title section5-right section5-right section5-right section5-right"
+      ". section5-content section5-content section5-content section5-content section5-content section5-right section5-right section5-right section5-right"
+      ". section5-content section5-content section5-content section5-content section5-content section5-right section5-right section5-right section5-right"
+      "footer footer footer footer footer footer footer footer footer footer";
+    .slider {
+      width: 5%;
+      height: 100vh;
+      position: fixed;
+      z-index: 1000;
+
+      @include flex();
+
+      .slider-sections-parent {
+        width: 0.2%;
+        height: 25%;
+        position: fixed;
+
+        .header-section,
+        .section1,
+        .section2,
+        .section3,
+        .section4,
+        .section5,
+        .section6 {
+          width: 100%;
+          height: calc(100% / 6);
+          background-color: $middle-color;
+        }
+        .header-section {
+          background-color: $light;
+        }
+      }
+    }
+    .hamburger_parent {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 10vh;
+      height: 10vh;
+      @include flex();
+      z-index: 10000000;
+
+      .hamburger {
+        width: 3vh;
+        height: 3vh;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        position: relative;
+
+        &:hover {
+          .hamburgerTopLine {
+            width: 60%;
+            animation: hamburgerHover 0.5s ease-in-out;
+          }
+          .hamburgerBottomLine {
+            width: 60%;
+            animation: hamburgerHover 0.5s ease-in-out;
+          }
+        }
+
+        .hamburgerTopLine,
+        .hamburgerMiddleLine,
+        .hamburgerBottomLine {
+          position: absolute;
+          width: 100%;
+          height: 15%;
+          background-color: $light;
+          animation: hamburgerHover2 0.5s ease-in-out;
+        }
+        .hamburgerTopLine {
+          top: 0;
+          left: 0;
+        }
+        .hamburgerMiddleLine {
+          top: calc(85% / 2);
+        }
+        .hamburgerBottomLine {
+          bottom: 0;
+          right: 0;
+        }
+        // .hamburger_box{
+        //     width: 100%;
+        //     height: 20px;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     @include flex();
+        //     position: relative;
+
+        //     &::before{
+        //         content: '';
+        //         display: inline-block;
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+        //         width: 100%;
+        //         height: 20%;
+        //         background-color: $dark;
+        //     }
+        //     &::after{
+        //         content: '';
+        //         display: inline-block;
+        //         position: absolute;
+        //         width: 100%;
+        //         height: 20%;
+        //         background-color: $dark;
+        //         bottom: 0;
+        //         left: 0;
+        //     }
+        // }
+      }
+      .hamburger--active {
+        animation: rotateHamburger 0.5s ease-in-out;
+        animation-fill-mode: both;
+      }
+    }
+    .navigation {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 10vh;
+      width: 40vw;
+      z-index: 1000000;
+      @include flex();
+      background-color: hsla(150, 15%, 5%, 0.5);
+      opacity: 0;
+
+      ul {
+        list-style: none;
+        width: 80%;
+
+        li {
+          display: inline-block;
+          margin: 4%;
+
+          span {
+            text-decoration: none;
+            color: $light;
+            font-size: 1em;
+            cursor: pointer;
+
+            &:hover {
+              color: $middle-color;
+            }
+          }
+        }
+      }
+    }
+    .navigation--active {
+      opacity: 1;
+      animation: opacityNavigation 0.5s ease-in-out;
+    }
+    .header-title {
+      grid-area: header-title;
+      color: $light;
+      font-size: 2.5em;
+      font-weight: bold;
+      @include titleAfter();
+    }
+    .header-subtitle {
+      grid-area: header-subtitle;
+      color: $light;
+      font-size: 0.8em;
+      padding-right: 10%;
+    }
+    .header-button {
+      grid-area: header-button;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+      .header-button-span {
+        @include flex();
+        width: 50%;
+        height: 30%;
+        background-color: $light;
+        font-size: 0.8em;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+          border-bottom: $middle-color 20% solid;
+        }
+
+        img {
+          height: 0.8em;
+          transform: translateX(10px);
+        }
+      }
+    }
+    .arrow {
+      grid-area: arrow;
+      @include flex();
+      img {
+        animation: arrowAnimation 2s ease-in-out infinite;
+      }
+    }
+    .header-left {
+      grid-area: header-left;
+    }
+    .header-right {
+      grid-area: header-right;
+      @include flex();
+      background-color: $light;
+      overflow: hidden;
+      position: relative;
+      img {
+        position: absolute;
+        height: 100%;
+        left: 0;
+      }
+    }
+    .section1-title {
+      grid-area: section1-title;
+      @include forTitle();
+      @include titleAfter();
+      span {
+        color: $middle-color;
+      }
+    }
+    .section1-content {
+      grid-area: section1-content;
+      @include forContent();
+    }
+    .section1-left {
+      grid-area: section1-left;
+    }
+    .section1-right {
+      grid-area: section1-right;
+      @include flex();
+    }
+    .section2-title {
+      grid-area: section2-title;
+      @include forTitle();
+      @include titleAfter();
+      span {
+        color: $middle-color;
+      }
+    }
+    .section2-content {
+      grid-area: section2-content;
+      @include forContent();
+    }
+    .section2-left {
+      grid-area: section2-left;
+    }
+    .section2-right {
+      grid-area: section2-right;
+      @include flex();
+    }
+    .section3-title {
+      grid-area: section3-title;
+      @include forTitle();
+      @include titleAfter();
+      span {
+        color: $middle-color;
+      }
+    }
+    .section3-content {
+      grid-area: section3-content;
+      @include forContent();
+    }
+    .section3-left {
+      grid-area: section3-left;
+    }
+    .section3-right {
+      grid-area: section3-right;
+      @include flex();
+    }
+    .section4-title {
+      grid-area: section4-title;
+      @include forTitle();
+      @include titleAfter();
+      span {
+        color: $middle-color;
+      }
+    }
+    .section4-content {
+      grid-area: section4-content;
+      @include forContent();
+    }
+    .section4-left {
+      grid-area: section4-left;
+    }
+    .section4-right {
+      grid-area: section4-right;
+      @include flex();
+
+      .sounds-container {
+        width: 70%;
+        height: 55%;
+        position: relative;
+        color: $light;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        .sound1-box,
+        .sound2-box,
+        .sound3-box,
+        .volume_slider_container {
+          position: relative;
+          width: 100%;
+          height: 20%;
+          @include flex();
+
+          img {
+            height: 60%;
+          }
+          .play-stop1,
+          .play-stop2,
+          .play-stop3 {
+            position: absolute;
+            left: 0;
+            width: 7vh;
+            height: 7vh;
+            border-left: 2px solid $middle-color;
+            @include flex();
+            cursor: pointer;
+          }
+        }
+        .volume_slider_container {
+          .volume_down,
+          .volume_up {
+            width: 20%;
+            height: 100%;
+            color: $light;
+            @include flex();
+          }
+          .volume_slider {
+            width: 60%;
+            appearance: none;
+            height: 3px;
+            background-color: $middle-color;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .section5-title {
+      grid-area: section5-title;
+      @include forTitle();
+      @include titleAfter();
+      span {
+        color: $middle-color;
+      }
+    }
+    .section5-content {
+      grid-area: section5-content;
+      @include forContent();
+    }
+    .section5-left {
+      grid-area: section5-left;
+    }
+    .section5-right {
+      grid-area: section5-right;
+      @include flex();
+    }
+    .section6-title {
+      grid-area: section6-title;
+      @include forTitle();
+      @include titleAfter();
+      span {
+        color: $middle-color;
+      }
+    }
+    .section6-content {
+      grid-area: section6-content;
+      @include forContent();
+    }
+    .section6-left {
+      grid-area: section6-left;
+    }
+    .section6-right {
+      grid-area: section6-right;
+      @include flex();
+    }
+    .footer {
+      grid-area: footer;
+      color: #f5f5f5;
+      @include flex();
+      &::before,
+      &::after {
+        content: "";
+        width: 10%;
+        height: 3px;
+        margin-right: 5%;
+        background-color: #ff533d;
+      }
+      &::after {
+        margin-left: 5%;
+      }
+    }
+  }
+}
+//animacje start
+@keyframes rotateHamburger {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes opacityNavigation {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hamburgerHover {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@keyframes hamburgerHover2 {
+  0% {
+    width: 60%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes arrowAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes imgTransform {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+@keyframes colorTransform {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
