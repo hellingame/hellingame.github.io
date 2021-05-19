@@ -50,9 +50,10 @@ html {
 body {
   background-color: $dark;
   .loader-wrapper {
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 1000000;
+    z-index: 10000000;
     background-color: $dark;
     @include flex();
 
@@ -60,7 +61,7 @@ body {
       width: 5vh;
       height: 5vh;
       background-color: transparent;
-      border: $middle-color 5px dotted;
+      border: $middle-color 5px solid;
       animation: loaderRotate 1s infinite;
     }
   }
@@ -128,7 +129,7 @@ body {
       width: 10vh;
       height: 10vh;
       @include flex();
-      z-index: 10000000;
+      z-index: 100000;
 
       .hamburger {
         width: 3vh;

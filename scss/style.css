@@ -20,9 +20,10 @@ body {
 }
 
 body .loader-wrapper {
+  position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 1000000;
+  z-index: 10000000;
   background-color: #0a0e0c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,7 +40,7 @@ body .loader-wrapper .loader {
   width: 5vh;
   height: 5vh;
   background-color: transparent;
-  border: #ff533d 5px dotted;
+  border: #ff533d 5px solid;
   -webkit-animation: loaderRotate 1s infinite;
           animation: loaderRotate 1s infinite;
 }
@@ -107,7 +108,7 @@ body .container .hamburger_parent {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 10000000;
+  z-index: 100000;
 }
 
 body .container .hamburger_parent .hamburger {
