@@ -13,8 +13,16 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script>
+      $(window).on("load", function () {
+        $(".loader-wrapper").fadeOut("slow");
+      });
+    </script>
   </head>
   <body>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
     <div class="container">
       <div class="slider">
         <div class="slider-sections-parent">
@@ -173,7 +181,11 @@
       </div>
       <div class="footer">
         <div class="footer-content">
-          2021 © All rights reserved. Made by Marcel Bączyński.
+          2021 © All rights reserved. Made by Marcel Bączyński. All materials is
+          used from
+          <a href="https://donpierogov.itch.io/hellin" target="_blank"
+            >this game</a
+          >.
         </div>
       </div>
     </div>

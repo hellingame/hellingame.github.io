@@ -49,6 +49,21 @@ html {
 
 body {
   background-color: $dark;
+  .loader-wrapper {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000000;
+    background-color: $dark;
+    @include flex();
+
+    .loader {
+      width: 5vh;
+      height: 5vh;
+      background-color: transparent;
+      border: $middle-color 5px dotted;
+      animation: loaderRotate 1s infinite;
+    }
+  }
   .container {
     display: grid;
     max-width: 100vw;
@@ -428,6 +443,10 @@ body {
       color: #f5f5f5;
       @include flex();
       text-align: center;
+      a {
+        color: $middle-color;
+        text-decoration: none;
+      }
       &::before,
       &::after {
         content: "";
@@ -497,6 +516,11 @@ body {
   }
   100% {
     width: 100%;
+  }
+}
+@keyframes loaderRotate {
+  100% {
+    transform: rotate(360deg);
   }
 }
 
