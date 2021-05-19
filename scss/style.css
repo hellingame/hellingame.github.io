@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,7 +25,22 @@ body .container {
   -ms-grid-columns: (1fr)[10];
       grid-template-columns: repeat(10, 1fr);
   grid-auto-rows: minmax(20vh, auto);
-      grid-template-areas: ". . . . . . header-right header-right header-right header-right" ". header-title header-title header-title header-title header-title header-right header-right header-right header-right" ". header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-right header-right header-right header-right" ". header-button header-button header-left header-left header-left header-right header-right header-right header-right" ". . . . arrow arrow header-right header-right header-right header-right" ". . . . . . section1-right section1-right section1-right section1-right" ". section1-title section1-title section1-title section1-title section1-title section1-right section1-right section1-right section1-right" ". section1-content section1-content section1-content section1-content section1-content section1-right section1-right section1-right section1-right" ". section1-content section1-content section1-content section1-content section1-content section1-right section1-right section1-right section1-right" ". . . . . . section2-right section2-right section2-right section2-right" ". section2-title section2-title section2-title section2-title section2-title section2-right section2-right section2-right section2-right" ". section2-content section2-content section2-content section2-content section2-content section2-right section2-right section2-right section2-right" ". section2-content section2-content section2-content section2-content section2-content section2-right section2-right section2-right section2-right" ". . . . . . section3-right section3-right section3-right section3-right" ". section3-title section3-title section3-title section3-title section3-title section3-right section3-right section3-right section3-right" ". section3-content section3-content section3-content section3-content section3-content section3-right section3-right section3-right section3-right" ". section3-content section3-content section3-content section3-content section3-content section3-right section3-right section3-right section3-right" ". . . . . . section4-right section4-right section4-right section4-right" ". section4-title section4-title section4-title section4-title section4-title section4-right section4-right section4-right section4-right" ". section4-content section4-content section4-content section4-content section4-content section4-right section4-right section4-right section4-right" ". section4-content section4-content section4-content section4-content section4-content section4-right section4-right section4-right section4-right" ". . . . . . section5-right section5-right section5-right section5-right" ". section5-title section5-title section5-title section5-title section5-title section5-right section5-right section5-right section5-right" ". section5-content section5-content section5-content section5-content section5-content section5-right section5-right section5-right section5-right" ". section5-content section5-content section5-content section5-content section5-content section5-right section5-right section5-right section5-right" "footer footer footer footer footer footer footer footer footer footer";
+      grid-template-areas: ". . . . . . header-right header-right header-right header-right" ". header-title header-title header-title header-title header-title header-right header-right header-right header-right" ". header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-right header-right header-right header-right" ". header-button header-button header-left header-left header-left header-right header-right header-right header-right" ". . . . arrow arrow header-right header-right header-right header-right" ". . . . . . section1-right section1-right section1-right section1-right" ". section1-title section1-title section1-title section1-title section1-title section1-right section1-right section1-right section1-right" ". section1-content section1-content section1-content section1-content section1-content section1-right section1-right section1-right section1-right" ". section1-content section1-content section1-content section1-content section1-content section1-right section1-right section1-right section1-right" ". section2-title section2-title section2-title section2-title section2-title section2-right section2-right section2-right section2-right" ". section2-content section2-content section2-content section2-content section2-content section2-right section2-right section2-right section2-right" ". section2-content section2-content section2-content section2-content section2-content section2-right section2-right section2-right section2-right" ". section3-title section3-title section3-title section3-title section3-title section3-right section3-right section3-right section3-right" ". section3-content section3-content section3-content section3-content section3-content section3-right section3-right section3-right section3-right" ". section3-content section3-content section3-content section3-content section3-content section3-right section3-right section3-right section3-right" ". section4-title section4-title section4-title section4-title section4-title section4-right section4-right section4-right section4-right" ". section4-content section4-content section4-content section4-content section4-content section4-right section4-right section4-right section4-right" ". section4-content section4-content section4-content section4-content section4-content section4-right section4-right section4-right section4-right" ". section5-title section5-title section5-title section5-title section5-title section5-right section5-right section5-right section5-right" ". section5-content section5-content section5-content section5-content section5-content section5-right section5-right section5-right section5-right" ". section5-content section5-content section5-content section5-content section5-content section5-right section5-right section5-right section5-right" "footer footer footer footer footer footer footer footer footer footer";
+}
+
+@media (orientation: portrait) {
+  body .container {
+        grid-template-areas: ". . . . . . . . . ." ". header-title header-title header-title header-title header-title header-title header-title header-title header-title" ". header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle" ". header-button header-button header-button header-button header-left arrow arrow arrow arrow" "header-right header-right header-right header-right header-right header-right header-right header-right header-right header-right" "header-right header-right header-right header-right header-right header-right header-right header-right header-right header-right" "header-right header-right header-right header-right header-right header-right header-right header-right header-right header-right" ". section1-title section1-title section1-title section1-title section1-title section1-title section1-title section1-title section1-title" ". section1-content section1-content section1-content section1-content section1-content section1-content section1-content section1-content section1-content" ". section1-content section1-content section1-content section1-content section1-content section1-content section1-content section1-content section1-content" ". section1-right section1-right section1-right section1-right section1-right section1-right section1-right section1-right section1-right" ". section2-title section2-title section2-title section2-title section2-title section2-title section2-title section2-title section2-title" ". section2-content section2-content section2-content section2-content section2-content section2-content section2-content section2-content section2-content" ". section2-content section2-content section2-content section2-content section2-content section2-content section2-content section2-content section2-content" "section2-right section2-right section2-right section2-right section2-right section2-right section2-right section2-right section2-right section2-right" ". section3-title section3-title section3-title section3-title section3-title section3-title section3-title section3-title section3-title" ". section3-content section3-content section3-content section3-content section3-content section3-content section3-content section3-content section3-content" ". section3-content section3-content section3-content section3-content section3-content section3-content section3-content section3-content section3-content" "section3-right section3-right section3-right section3-right section3-right section3-right section3-right section3-right section3-right section3-right" ". section4-title section4-title section4-title section4-title section4-title section4-title section4-title section4-title section4-title" ". section4-content section4-content section4-content section4-content section4-content section4-content section4-content section4-content section4-content" ". section4-content section4-content section4-content section4-content section4-content section4-content section4-content section4-content section4-content" "section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right" "section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right" ". section5-title section5-title section5-title section5-title section5-title section5-title section5-title section5-title section5-title" ". section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content" ". section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content" "section5-right section5-right section5-right section5-right section5-right section5-right section5-right section5-right section5-right section5-right" "footer footer footer footer footer footer footer footer footer footer";
+  }
+}
+
+@media (orientation: portrait) {
+  body .container .header-title {
+    font-size: 1rem;
+  }
+  body .container .navigation {
+    width: 100vw;
+  }
 }
 
 body .container .slider {
@@ -366,7 +385,7 @@ body .container .section1-right {
 }
 
 body .container .section2-title {
-  -ms-grid-row: 11;
+  -ms-grid-row: 10;
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
   grid-area: section2-title;
@@ -390,7 +409,7 @@ body .container .section2-title span {
 }
 
 body .container .section2-content {
-  -ms-grid-row: 12;
+  -ms-grid-row: 11;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
@@ -405,7 +424,7 @@ body .container .section2-left {
 
 body .container .section2-right {
   -ms-grid-row: 10;
-  -ms-grid-row-span: 4;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 7;
   -ms-grid-column-span: 4;
   grid-area: section2-right;
@@ -421,7 +440,7 @@ body .container .section2-right {
 }
 
 body .container .section3-title {
-  -ms-grid-row: 15;
+  -ms-grid-row: 13;
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
   grid-area: section3-title;
@@ -445,7 +464,7 @@ body .container .section3-title span {
 }
 
 body .container .section3-content {
-  -ms-grid-row: 16;
+  -ms-grid-row: 14;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
@@ -459,8 +478,8 @@ body .container .section3-left {
 }
 
 body .container .section3-right {
-  -ms-grid-row: 14;
-  -ms-grid-row-span: 4;
+  -ms-grid-row: 13;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 7;
   -ms-grid-column-span: 4;
   grid-area: section3-right;
@@ -476,7 +495,7 @@ body .container .section3-right {
 }
 
 body .container .section4-title {
-  -ms-grid-row: 19;
+  -ms-grid-row: 16;
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
   grid-area: section4-title;
@@ -500,7 +519,7 @@ body .container .section4-title span {
 }
 
 body .container .section4-content {
-  -ms-grid-row: 20;
+  -ms-grid-row: 17;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
@@ -514,8 +533,8 @@ body .container .section4-left {
 }
 
 body .container .section4-right {
-  -ms-grid-row: 18;
-  -ms-grid-row-span: 4;
+  -ms-grid-row: 16;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 7;
   -ms-grid-column-span: 4;
   grid-area: section4-right;
@@ -631,7 +650,7 @@ body .container .section4-right .sounds-container .volume_slider_container .volu
 }
 
 body .container .section5-title {
-  -ms-grid-row: 23;
+  -ms-grid-row: 19;
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
   grid-area: section5-title;
@@ -655,7 +674,7 @@ body .container .section5-title span {
 }
 
 body .container .section5-content {
-  -ms-grid-row: 24;
+  -ms-grid-row: 20;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
@@ -669,8 +688,8 @@ body .container .section5-left {
 }
 
 body .container .section5-right {
-  -ms-grid-row: 22;
-  -ms-grid-row-span: 4;
+  -ms-grid-row: 19;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 7;
   -ms-grid-column-span: 4;
   grid-area: section5-right;
@@ -730,7 +749,7 @@ body .container .section6-right {
 }
 
 body .container .footer {
-  -ms-grid-row: 26;
+  -ms-grid-row: 22;
   -ms-grid-column: 1;
   -ms-grid-column-span: 10;
   grid-area: footer;
