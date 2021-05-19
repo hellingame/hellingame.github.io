@@ -41,49 +41,10 @@ html {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
 }
+
 body {
   background-color: $dark;
   .container {
-    // @media (orientation: portrait) {
-    //   grid-template-areas:
-    //     ". . . . . . . . . ."
-    //     ". header-title header-title header-title header-title header-title header-title header-title header-title header-title"
-    //     ". header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle"
-    //     ". header-button header-button header-button header-button header-left arrow arrow arrow arrow"
-    //     "header-right header-right header-right header-right header-right header-right header-right header-right header-right header-right"
-    //     "header-right header-right header-right header-right header-right header-right header-right header-right header-right header-right"
-    //     "header-right header-right header-right header-right header-right header-right header-right header-right header-right header-right"
-    //     ". section1-title section1-title section1-title section1-title section1-title section1-title section1-title section1-title section1-title"
-    //     ". section1-content section1-content section1-content section1-content section1-content section1-content section1-content section1-content section1-content"
-    //     ". section1-content section1-content section1-content section1-content section1-content section1-content section1-content section1-content section1-content"
-    //     ". section1-right section1-right section1-right section1-right section1-right section1-right section1-right section1-right section1-right"
-    //     ". section2-title section2-title section2-title section2-title section2-title section2-title section2-title section2-title section2-title"
-    //     ". section2-content section2-content section2-content section2-content section2-content section2-content section2-content section2-content section2-content"
-    //     ". section2-content section2-content section2-content section2-content section2-content section2-content section2-content section2-content section2-content"
-    //     "section2-right section2-right section2-right section2-right section2-right section2-right section2-right section2-right section2-right section2-right"
-    //     ". section3-title section3-title section3-title section3-title section3-title section3-title section3-title section3-title section3-title"
-    //     ". section3-content section3-content section3-content section3-content section3-content section3-content section3-content section3-content section3-content"
-    //     ". section3-content section3-content section3-content section3-content section3-content section3-content section3-content section3-content section3-content"
-    //     "section3-right section3-right section3-right section3-right section3-right section3-right section3-right section3-right section3-right section3-right"
-    //     ". section4-title section4-title section4-title section4-title section4-title section4-title section4-title section4-title section4-title"
-    //     ". section4-content section4-content section4-content section4-content section4-content section4-content section4-content section4-content section4-content"
-    //     ". section4-content section4-content section4-content section4-content section4-content section4-content section4-content section4-content section4-content"
-    //     "section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right"
-    //     "section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right"
-    //     ". section5-title section5-title section5-title section5-title section5-title section5-title section5-title section5-title section5-title"
-    //     ". section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content"
-    //     ". section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content"
-    //     "section5-right section5-right section5-right section5-right section5-right section5-right section5-right section5-right section5-right section5-right"
-    //     "footer footer footer footer footer footer footer footer footer footer";
-    // }
-    // @media (orientation: portrait) {
-    //   .header-title {
-    //     font-size: 1rem;
-    //   }
-    //   .navigation {
-    //     width: 100vw;
-    //   }
-    // }
     display: grid;
     max-width: 100vw;
     grid-template-columns: repeat(10, 1fr);
@@ -530,5 +491,47 @@ body {
   }
   100% {
     width: 100%;
+  }
+}
+
+@media (orientation: portrait) {
+  .container {
+    grid-template-areas:
+      ". . . . . . . . . ."
+      ". header-title header-title header-title header-title header-title header-title header-title header-title header-title"
+      ". header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle header-subtitle"
+      ". header-button header-button header-button header-button header-left arrow arrow arrow arrow"
+      "header-right header-right header-right header-right header-right header-right header-right header-right header-right header-right"
+      "header-right header-right header-right header-right header-right header-right header-right header-right header-right header-right"
+      "header-right header-right header-right header-right header-right header-right header-right header-right header-right header-right"
+      ". section1-title section1-title section1-title section1-title section1-title section1-title section1-title section1-title section1-title"
+      ". section1-content section1-content section1-content section1-content section1-content section1-content section1-content section1-content section1-content"
+      ". section1-content section1-content section1-content section1-content section1-content section1-content section1-content section1-content section1-content"
+      ". section1-right section1-right section1-right section1-right section1-right section1-right section1-right section1-right section1-right"
+      ". section2-title section2-title section2-title section2-title section2-title section2-title section2-title section2-title section2-title"
+      ". section2-content section2-content section2-content section2-content section2-content section2-content section2-content section2-content section2-content"
+      ". section2-content section2-content section2-content section2-content section2-content section2-content section2-content section2-content section2-content"
+      "section2-right section2-right section2-right section2-right section2-right section2-right section2-right section2-right section2-right section2-right"
+      ". section3-title section3-title section3-title section3-title section3-title section3-title section3-title section3-title section3-title"
+      ". section3-content section3-content section3-content section3-content section3-content section3-content section3-content section3-content section3-content"
+      ". section3-content section3-content section3-content section3-content section3-content section3-content section3-content section3-content section3-content"
+      "section3-right section3-right section3-right section3-right section3-right section3-right section3-right section3-right section3-right section3-right"
+      ". section4-title section4-title section4-title section4-title section4-title section4-title section4-title section4-title section4-title"
+      ". section4-content section4-content section4-content section4-content section4-content section4-content section4-content section4-content section4-content"
+      ". section4-content section4-content section4-content section4-content section4-content section4-content section4-content section4-content section4-content"
+      "section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right"
+      "section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right section4-right"
+      ". section5-title section5-title section5-title section5-title section5-title section5-title section5-title section5-title section5-title"
+      ". section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content"
+      ". section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content"
+      "section5-right section5-right section5-right section5-right section5-right section5-right section5-right section5-right section5-right section5-right"
+      "footer footer footer footer footer footer footer footer footer footer";
+  }
+
+  .header-title {
+    font-size: 1rem;
+  }
+  .navigation {
+    width: 100vw;
   }
 }
