@@ -92,7 +92,7 @@ body {
       ". section5-title section5-title section5-title section5-title section5-title section5-right section5-right section5-right section5-right"
       ". section5-content section5-content section5-content section5-content section5-content section5-right section5-right section5-right section5-right"
       ". section5-content section5-content section5-content section5-content section5-content section5-right section5-right section5-right section5-right"
-      "footer footer footer footer footer footer footer footer footer footer";
+      ". footer footer footer footer footer footer footer footer footer";
     .slider {
       width: 5%;
       height: 100vh;
@@ -129,7 +129,7 @@ body {
       width: 10vh;
       height: 10vh;
       @include flex();
-      z-index: 100000;
+      z-index: 10000000000;
 
       .hamburger {
         width: 3vh;
@@ -444,6 +444,7 @@ body {
       color: #f5f5f5;
       @include flex();
       text-align: center;
+      font-size: 0.5rem;
       a {
         color: $middle-color;
         text-decoration: none;
@@ -562,7 +563,7 @@ body {
         ". section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content"
         ". section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content section5-content"
         "section5-right section5-right section5-right section5-right section5-right section5-right section5-right section5-right section5-right section5-right"
-        "footer footer footer footer footer footer footer footer footer footer";
+        ". footer footer footer footer footer footer footer footer footer";
 
       .slider {
         width: 5%;
