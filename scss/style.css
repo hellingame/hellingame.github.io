@@ -348,6 +348,7 @@ body .container .section1-title {
   grid-area: section1-title;
   color: #f5f5f5;
   font-size: 2em;
+  line-height: 1.75;
 }
 
 body .container .section1-title::after {
@@ -373,6 +374,7 @@ body .container .section1-content {
   grid-area: section1-content;
   color: #f5f5f5;
   font-size: 0.8em;
+  line-height: 1.75;
 }
 
 body .container .section1-left {
@@ -403,6 +405,7 @@ body .container .section2-title {
   grid-area: section2-title;
   color: #f5f5f5;
   font-size: 2em;
+  line-height: 1.75;
 }
 
 body .container .section2-title::after {
@@ -428,6 +431,7 @@ body .container .section2-content {
   grid-area: section2-content;
   color: #f5f5f5;
   font-size: 0.8em;
+  line-height: 1.75;
 }
 
 body .container .section2-left {
@@ -458,6 +462,7 @@ body .container .section3-title {
   grid-area: section3-title;
   color: #f5f5f5;
   font-size: 2em;
+  line-height: 1.75;
 }
 
 body .container .section3-title::after {
@@ -483,6 +488,7 @@ body .container .section3-content {
   grid-area: section3-content;
   color: #f5f5f5;
   font-size: 0.8em;
+  line-height: 1.75;
 }
 
 body .container .section3-left {
@@ -513,6 +519,7 @@ body .container .section4-title {
   grid-area: section4-title;
   color: #f5f5f5;
   font-size: 2em;
+  line-height: 1.75;
 }
 
 body .container .section4-title::after {
@@ -538,6 +545,7 @@ body .container .section4-content {
   grid-area: section4-content;
   color: #f5f5f5;
   font-size: 0.8em;
+  line-height: 1.75;
 }
 
 body .container .section4-left {
@@ -668,6 +676,7 @@ body .container .section5-title {
   grid-area: section5-title;
   color: #f5f5f5;
   font-size: 2em;
+  line-height: 1.75;
 }
 
 body .container .section5-title::after {
@@ -693,6 +702,7 @@ body .container .section5-content {
   grid-area: section5-content;
   color: #f5f5f5;
   font-size: 0.8em;
+  line-height: 1.75;
 }
 
 body .container .section5-left {
@@ -720,6 +730,7 @@ body .container .section6-title {
   grid-area: section6-title;
   color: #f5f5f5;
   font-size: 2em;
+  line-height: 1.75;
 }
 
 body .container .section6-title::after {
@@ -741,6 +752,7 @@ body .container .section6-content {
   grid-area: section6-content;
   color: #f5f5f5;
   font-size: 0.8em;
+  line-height: 1.75;
 }
 
 body .container .section6-left {
@@ -1247,6 +1259,7 @@ body .container .footer::after {
     grid-area: section1-content;
     color: #f5f5f5;
     font-size: 0.8em;
+    line-height: 1.75;
   }
   body .container .section1-left {
     grid-area: section1-left;
@@ -1296,6 +1309,7 @@ body .container .footer::after {
     grid-area: section2-content;
     color: #f5f5f5;
     font-size: 0.8em;
+    line-height: 1.75;
   }
   body .container .section2-left {
     grid-area: section2-left;
@@ -1345,6 +1359,7 @@ body .container .footer::after {
     grid-area: section3-content;
     color: #f5f5f5;
     font-size: 0.8em;
+    line-height: 1.75;
   }
   body .container .section3-left {
     grid-area: section3-left;
@@ -1394,6 +1409,7 @@ body .container .footer::after {
     grid-area: section4-content;
     color: #f5f5f5;
     font-size: 0.8em;
+    line-height: 1.75;
   }
   body .container .section4-left {
     grid-area: section4-left;
@@ -1502,9 +1518,6 @@ body .container .footer::after {
   }
   body .container .section4-right .sounds-container .volume_slider_container .volume_slider {
     width: 60%;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
     height: 3px;
     background-color: #ff533d;
     cursor: pointer;
@@ -1539,6 +1552,7 @@ body .container .footer::after {
     grid-area: section5-content;
     color: #f5f5f5;
     font-size: 0.8em;
+    line-height: 1.75;
   }
   body .container .section5-left {
     grid-area: section5-left;
@@ -1562,6 +1576,7 @@ body .container .footer::after {
     grid-area: section6-title;
     color: #f5f5f5;
     font-size: 2em;
+    line-height: 1.75;
   }
   body .container .section6-title::after {
     content: "";
@@ -1580,6 +1595,7 @@ body .container .footer::after {
     grid-area: section6-content;
     color: #f5f5f5;
     font-size: 0.8em;
+    line-height: 1.75;
   }
   body .container .section6-left {
     grid-area: section6-left;

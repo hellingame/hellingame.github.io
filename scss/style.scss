@@ -6,6 +6,7 @@
 @mixin forTitle {
   color: $light;
   font-size: 2em;
+  line-height: 1.75;
 }
 @mixin forTitle2 {
   color: $light;
@@ -15,6 +16,7 @@
 @mixin forContent {
   color: $light;
   font-size: 0.8em;
+  line-height: 1.75;
 }
 @mixin titleAfter {
   &::after {
@@ -866,7 +868,6 @@ body {
             }
             .volume_slider {
               width: 60%;
-              appearance: none;
               height: 3px;
               background-color: $middle-color;
               cursor: pointer;
